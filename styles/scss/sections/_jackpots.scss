@@ -1,0 +1,68 @@
+.jackpots {
+  margin-bottom: 200px;
+  @include breakpoint('phone') {
+    margin-bottom: 50px;
+  }
+}
+
+.jackpots__content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 100px;
+  @include breakpoint('phone') {
+    flex-direction: column;
+    margin-bottom: 50px;
+  }
+}
+
+.jackpots__title {
+  width: 50%;
+  border-right: 2px solid $lite-gray;
+  padding-right: 80px;
+  font-size: 40px;
+  color: $blue-text;
+  @include breakpoint('phone') {
+    width: 100%;
+    border-right: none;
+    padding-right: 0;
+    margin-bottom: 20px;
+  }
+}
+
+.jackpots__text {
+  width: 50%;
+  padding: 0 60px;
+  color: $gray-text;
+  @include breakpoint('phone') {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+.jackpots__block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include breakpoint('phone') {
+    flex-direction: column;
+  }
+}
+
+.jackpots__box {
+  width: 260px;
+  @include breakpoint('phone') {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+}
+
+.jackpots__img {
+  margin-bottom: 20px;
+}
+
+.jackpots__subtitle {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}

@@ -1,0 +1,126 @@
+.subscribe {
+  margin-bottom: 100px;
+}
+
+.subscribe__title {
+  font-size: 36px;
+  color: $blue-text;
+  font-weight: 600;
+  max-width: 570px;
+  margin: 0 auto 30px auto;
+  text-align: center;
+}
+
+.subscribe__text {
+  color: $gray-text;
+  max-width: 640px;
+  margin: 0 auto 100px auto;
+  text-align: center;
+  @include breakpoint('phone') {
+    margin-bottom: 50px;
+  }
+}
+
+.subscribe__bar-block {
+  width: 280px;
+  height: 57px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto 50px auto;
+  border: 2px solid $lite-gray;
+  border-radius: 30px;
+  padding: 2px;
+  cursor: pointer;
+}
+
+.subscribe__bar {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $blue-text;
+  font-weight: 700;
+}
+
+.active-text-bar {
+  background: $blue;
+  border-radius: 30px;
+  color: $white;
+}
+
+.subscribe__block {
+  display: none;
+}
+
+.active-block {
+  display: flex;
+  justify-content: center;
+  @include breakpoint('phone') {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.subscribe__card {
+  margin: 0 50px;
+  box-shadow: 0 1px 10px -5px $gray-text;
+  border-radius: 12px;
+  height: 530px;
+  position: relative;
+  max-width: 320px;
+  width: 100%;
+  text-align: center;
+  padding: 60px 30px 30px;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 234px;
+    width: 100%;
+    background: $lite-gray;
+    z-index: -1;
+  }
+  @include breakpoint('tablet') {
+    margin: 0 20px;
+  }
+  @include breakpoint('phone') {
+    margin: 20px 0;
+  }
+}
+
+.subscribe__card-pro {
+  height: 575px;
+}
+
+.subscribe__price-tag {
+  font-size: 18px;
+  color: $gray-text;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.subscribe__price {
+  font-size: 60px;
+  color: $blue-text;
+  font-weight: 700;
+}
+
+.subscribe__subtitle {
+  font-size: 20px;
+  color: $blue-text;
+  margin-bottom: 5px;
+}
+
+.subscribe__small-text {
+  display: block;
+  color: $gray-text;
+  margin-bottom: 70px;
+}
+
+.subscribe__item {
+  color: $gray-text;
+  margin-bottom: 25px;
+}

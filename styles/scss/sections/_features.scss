@@ -1,0 +1,81 @@
+.features {
+  margin-bottom: 100px;
+  @include breakpoint('phone') {
+    margin-bottom: 30px;
+  }
+}
+
+.features__container {
+  display: flex;
+  align-items: center;
+  margin: 0 -10px;
+  @include breakpoint('phone') {
+    flex-direction: column-reverse;
+  }
+}
+
+.features__img-block {
+  padding: 0 10px;
+}
+
+.features__img {
+  width: 100%;
+  @include breakpoint('tablet') {
+    width: 350px;
+  }
+  @include breakpoint('phone') {
+    display: none;
+  }
+}
+
+.features__content {
+  padding: 0 10px;
+  width: 35%;
+  @include breakpoint('touch') {
+    width: 100%;
+  }
+}
+
+.features__title {
+  font-size: 36px;
+  color: $blue-text;
+  max-width: 280px;
+  margin-bottom: 20px;
+}
+
+.features__text {
+  color: $gray-text;
+  margin-bottom: 100px;
+  @include breakpoint('touch') {
+    margin-bottom: 50px;
+  }
+}
+
+.features__box {
+  display: flex;
+  align-items: center;
+}
+
+.features__box {
+  margin-bottom: 60px;
+  padding-right: 50px;
+  .features__text {
+    margin-bottom: 0;
+  }
+  @include breakpoint('touch') {
+    margin-bottom: 30px;
+  }
+  @include breakpoint('phone') {
+    padding-right: 0;
+  }
+}
+
+.features__box-img {
+  margin-right: 30px;
+}
+
+.features__subtitle {
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 10px;
+}

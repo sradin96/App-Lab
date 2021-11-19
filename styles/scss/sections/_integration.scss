@@ -1,0 +1,97 @@
+.integration {
+  margin-bottom: 100px;
+}
+
+.integration__container {
+  display: flex;
+  width: 100%;
+  position: relative;
+  @include breakpoint('phone') {
+    flex-direction: column;
+  }
+}
+
+.integration__icons {
+  width: 60%;
+  font-size: 48px;
+  color: $blue-text;
+  @include breakpoint('tablet') {
+    font-size: 36px;
+  }
+  @include breakpoint('phone') {
+    width: 100%;
+    font-size: 32px;
+    position: absolute;
+    top: 160px;
+    left: 0;
+    text-align: center;
+  }
+}
+
+.integration__icon {
+  @include breakpoint('phone') {
+    margin: 0 10px;
+  }
+}
+
+.icon-swift {
+  transform: translate(-10px, -50px);
+  @include breakpoint('phone') {
+    transform: translate(0, 0);
+  }
+}
+
+.icon-java {
+  transform: translate(40px, 150px);
+  @include breakpoint('phone') {
+    transform: translate(0, 0);
+  }
+}
+
+.icon-github {
+  transform: translate(120px, 20px);
+  @include breakpoint('phone') {
+    transform: translate(0, 0);
+  }
+}
+
+.icon-js {
+  transform: translate(200px, 100px);
+  @include breakpoint('phone') {
+    transform: translate(0, 0);
+  }
+}
+
+.icon-python {
+  transform: translate(110px, -100px);
+  @include breakpoint('phone') {
+    transform: translate(0, 0);
+  }
+}
+
+.integration__content {
+  width: 40%;
+  @include breakpoint('phone') {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.integration__title {
+  color: $blue-text;
+  font-size: 36px;
+  max-width: 355px;
+  margin-bottom: 30px;
+  @include breakpoint('phone') {
+    margin: 0 auto 100px auto;
+  }
+}
+
+.integration__text {
+  color: $gray-text;
+  margin-bottom: 50px;
+}
+
+.integration__btn {
+  background: $blue-text;
+}

@@ -1,0 +1,108 @@
+.header {
+  padding: 60px 0 20px;
+  position: relative;
+  @include breakpoint('touch') {
+    padding: 20px 0;
+  }
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__list {
+  display: flex;
+  align-items: center;
+  @include breakpoint('touch') {
+    position: absolute;
+    left: 0;
+    top: -100px;
+    opacity: 0;
+    width: 100%;
+    height: 100vh;
+    pointer-events: none;
+    background: $blue;
+    flex-direction: column;
+    transition: $transition;
+    padding: 50px;
+  }
+}
+
+.open-menu {
+  top: 70px;
+  left: 0;
+  opacity: 1;
+  pointer-events: all;
+  z-index: 10;
+}
+
+.header__item {
+  margin-left: 40px;
+  @include breakpoint('touch') {
+    margin: 20px 0;
+  }
+}
+
+.header__link {
+  color: $blue-text;
+  @include breakpoint('touch') {
+    color: $white;
+  }
+}
+
+.btn {
+  color: $white;
+}
+
+.header__menu {
+  width: 40px;
+  height: 40px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: transparent;
+  display: none;
+  @include breakpoint('touch') {
+    display: block;
+  }
+}
+
+.header__menu-bar {
+  background: $blue-text;
+  width: 40px;
+  height: 4px;
+  display: block;
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 0;
+    background: $blue-text;
+    width: 40px;
+    height: 4px;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    right: 0;
+    background: $blue-text;
+    width: 25px;
+    height: 4px;
+  }
+}
+
+.active-bar {
+  transform: rotate(45deg);
+  &::before {
+    opacity: 0;
+  }
+  &::after {
+    transform: rotate(90deg);
+    width: 40px;
+    bottom: 0px;
+  }
+}

@@ -1,0 +1,93 @@
+.ultimate {
+  margin-bottom: 100px;
+  @include breakpoint('phone') {
+    margin-bottom: 50px;
+  }
+}
+
+.ultimate__container {
+  display: flex;
+  max-width: 100%;
+  width: 100%;
+  @include breakpoint('tablet') {
+    align-items: center;
+  }
+}
+
+.ultimate__content {
+  width: 50%;
+  @include breakpoint('phone') {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.ultimate__title {
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  max-width: 320px;
+  color: $blue-text;
+  @include breakpoint('phone') {
+    margin: 0 auto 20px auto;
+  }
+}
+
+.ultimate__text {
+  color: $gray-text;
+  max-width: 400px;
+  margin-bottom: 30px;
+  @include breakpoint('phone') {
+    margin: 0 auto 30px auto;
+  }
+}
+
+.ultimate__block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.ultimate__box {
+  width: 50%;
+}
+
+.ultimate__box-img {
+  margin-bottom: 20px;
+}
+
+.ultimate__subtitle {
+  font-size: 20px;
+  font-weight: 600;
+  color: $blue-text;
+  margin-bottom: 10px;
+}
+
+.ultimate__img-block {
+  width: 50%;
+  position: relative;
+  @include breakpoint('phone') {
+    display: none;
+  }
+}
+
+.ultimate__img {
+  position: absolute;
+  width: 100%;
+  max-width: 458px;
+  @include breakpoint('tablet') {
+    max-width: 280px;
+  }
+}
+
+.img--behind {
+  transform: translate(30px, -100px);
+}
+
+.img--front {
+  transform: translate(220px, -150px);
+  @include breakpoint('tablet') {
+    transform: translate(120px, -150px);
+  }
+}

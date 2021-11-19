@@ -1,0 +1,36 @@
+.companies {
+  margin-bottom: 200px;
+  @include breakpoint('touch') {
+    margin-bottom: 80px;
+  }
+}
+
+.companies__title {
+  text-align: center;
+  color: $blue-text;
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 100px;
+  @include breakpoint('touch') {
+    margin-bottom: 50px;
+  }
+}
+
+.companies__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.companies__img-block {
+  margin: 30px 10px;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.comapnies__img {
+  display: block;
+}
