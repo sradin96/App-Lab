@@ -13,6 +13,7 @@
   @include breakpoint('phone') {
     flex-direction: column;
     margin-bottom: 50px;
+    text-align: center;
   }
 }
 
@@ -22,11 +23,15 @@
   padding-right: 80px;
   font-size: 40px;
   color: $blue-text;
+  @include breakpoint('touch') {
+    font-size: 32px;
+  }
   @include breakpoint('phone') {
     width: 100%;
     border-right: none;
     padding-right: 0;
     margin-bottom: 20px;
+    font-size: 28px;
   }
 }
 
@@ -46,6 +51,7 @@
   align-items: center;
   @include breakpoint('phone') {
     flex-direction: column;
+    text-align: center;
   }
 }
 

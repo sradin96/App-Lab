@@ -35,10 +35,16 @@ a {
 .btn {
   color: #ffffff;
   background: #515efc;
-  padding: 15px 40px;
+  padding: 14px 38px;
   border-radius: 30px;
   font-weight: 700;
   display: inline-block;
+  border: 2px solid #515efc;
+  transition: all 0.3s ease-in;
+}
+.btn:hover {
+  color: #515efc;
+  background: transparent;
 }
 
 .subtitle--red {
@@ -223,9 +229,16 @@ a {
   border-radius: 30px;
   margin-bottom: 15px;
 }
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .banner__editor {
+    width: 70%;
+  }
+}
 @media only screen and (min-width: 120px) and (max-width: 767px) {
   .banner__editor {
     margin: 0 auto 10px auto;
+    width: 100%;
+    justify-content: center;
   }
 }
 
@@ -253,7 +266,8 @@ a {
 }
 @media only screen and (min-width: 120px) and (max-width: 767px) {
   .banner__title {
-    margin: 0 auto 30px auto;
+    margin: 0 auto 20px auto;
+    font-size: 42px;
   }
 }
 
@@ -271,6 +285,12 @@ a {
 
 .banner__link {
   margin-right: 30px;
+}
+@media only screen and (min-width: 120px) and (max-width: 767px) {
+  .banner__link {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
 }
 
 .banner__cta {
@@ -338,7 +358,7 @@ a {
   width: 50%;
   height: 50%;
 }
-@media only screen and (min-width: 120px) and (max-width: 767px) {
+@media only screen and (min-width: 120px) and (max-width: 1024px) {
   .banner__video {
     width: 80%;
     height: 35%;
@@ -520,6 +540,7 @@ a {
   .jackpots__content {
     flex-direction: column;
     margin-bottom: 50px;
+    text-align: center;
   }
 }
 
@@ -530,12 +551,18 @@ a {
   font-size: 40px;
   color: #242f51;
 }
+@media only screen and (min-width: 120px) and (max-width: 1024px) {
+  .jackpots__title {
+    font-size: 32px;
+  }
+}
 @media only screen and (min-width: 120px) and (max-width: 767px) {
   .jackpots__title {
     width: 100%;
     border-right: none;
     padding-right: 0;
     margin-bottom: 20px;
+    font-size: 28px;
   }
 }
 
@@ -559,6 +586,7 @@ a {
 @media only screen and (min-width: 120px) and (max-width: 767px) {
   .jackpots__block {
     flex-direction: column;
+    text-align: center;
   }
 }
 
@@ -698,6 +726,12 @@ a {
 
 .integration__btn {
   background: #242f51;
+  border: 2px solid #242f51;
+  transition: all 0.3s ease-in;
+}
+.integration__btn:hover {
+  background: transparent;
+  color: #242f51;
 }
 
 .cards {
@@ -710,7 +744,7 @@ a {
 }
 @media only screen and (min-width: 120px) and (max-width: 767px) {
   .cards {
-    margin-bottom: 50px;
+    margin-bottom: 40px;
   }
 }
 
@@ -729,6 +763,11 @@ a {
   margin: 0 auto 100px auto;
   text-align: center;
   line-height: 24px;
+}
+@media only screen and (min-width: 120px) and (max-width: 1024px) {
+  .cards__text {
+    margin-bottom: 40px;
+  }
 }
 
 .cards__block {
@@ -928,6 +967,10 @@ a {
   display: none;
 }
 
+.subscribe__bar-text {
+  transition: all 0.3s ease-in;
+}
+
 .active-block {
   display: flex;
   justify-content: center;
@@ -1003,6 +1046,31 @@ a {
 .subscribe__item {
   color: #616368;
   margin-bottom: 25px;
+}
+
+.subscribe__link {
+  color: #515efc;
+  display: inline-block;
+  position: relative;
+  transition: all 0.3s ease-in;
+}
+.subscribe__link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #515efc;
+  bottom: -3px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 0.3s ease-in;
+}
+.subscribe__link:hover::after {
+  width: 100%;
+}
+
+.btn {
+  color: #ffffff;
 }
 
 .testimonials {
@@ -1085,6 +1153,11 @@ a {
 .testimonials__person-img {
   margin-right: 20px;
 }
+@media only screen and (min-width: 120px) and (max-width: 1024px) {
+  .testimonials__person-img {
+    width: 70px;
+  }
+}
 
 .testimonials__person-block {
   display: flex;
@@ -1102,11 +1175,21 @@ a {
   font-weight: 600;
   font-size: 18px;
 }
+@media only screen and (min-width: 120px) and (max-width: 1024px) {
+  .testimonials__name-title {
+    font-size: 16px;
+  }
+}
 
 .testimonials__name-subtitle {
   display: block;
   color: #616368;
   font-size: 18px;
+}
+@media only screen and (min-width: 120px) and (max-width: 1024px) {
+  .testimonials__name-subtitle {
+    font-size: 16px;
+  }
 }
 
 .testimonials__btns {
@@ -1126,6 +1209,13 @@ a {
   border-radius: 50%;
   margin-left: 20px;
   cursor: pointer;
+  transition: all 0.3s ease-in;
+}
+.testimonials__btn:hover {
+  background: #242f51;
+}
+.testimonials__btn:hover .testimonials__icon-btn {
+  color: #ffffff;
 }
 
 .testimonials__icon-btn {
@@ -1168,6 +1258,9 @@ a {
   opacity: 0;
   transition: all 0.3s ease-in;
 }
+.questions__card:hover {
+  background: rgba(36, 47, 81, 0.1);
+}
 @media only screen and (min-width: 120px) and (max-width: 767px) {
   .questions__card {
     max-height: 80px;
@@ -1206,6 +1299,7 @@ a {
 
 .questions__icon {
   font-size: 20px;
+  color: #242f51;
 }
 
 .download__container {
@@ -1245,10 +1339,16 @@ a {
   }
 }
 
+.download__link-img {
+  transition: all 0.3s ease-in;
+}
 @media only screen and (min-width: 120px) and (max-width: 767px) {
   .download__link-img {
     width: 80%;
   }
+}
+.download__link-img:hover {
+  transform: scale(1.1);
 }
 
 .download__img-block {

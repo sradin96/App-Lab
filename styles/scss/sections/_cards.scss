@@ -4,7 +4,7 @@
     margin-bottom: 100px;
   }
   @include breakpoint('phone') {
-    margin-bottom: 50px;
+    margin-bottom: 40px;
   }
 }
 
@@ -23,6 +23,9 @@
   margin: 0 auto 100px auto;
   text-align: center;
   line-height: 24px;
+  @include breakpoint('touch') {
+    margin-bottom: 40px;
+  }
 }
 
 .cards__block {

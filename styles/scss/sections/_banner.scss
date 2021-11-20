@@ -26,8 +26,13 @@
   width: 55%;
   border-radius: 30px;
   margin-bottom: 15px;
+  @include breakpoint('tablet') {
+    width: 70%;
+  }
   @include breakpoint('phone') {
     margin: 0 auto 10px auto;
+    width: 100%;
+    justify-content: center;
   }
 }
 
@@ -53,7 +58,8 @@
   color: $blue-text;
   margin-bottom: 30px;
   @include breakpoint('phone') {
-    margin: 0 auto 30px auto;
+    margin: 0 auto 20px auto;
+    font-size: 42px;
   }
 }
 
@@ -69,6 +75,10 @@
 
 .banner__link {
   margin-right: 30px;
+  @include breakpoint('phone') {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
 }
 
 .banner__cta {
@@ -133,7 +143,7 @@
 .banner__video {
   width: 50%;
   height: 50%;
-  @include breakpoint('phone') {
+  @include breakpoint('touch') {
     width: 80%;
     height: 35%;
   }

@@ -54,6 +54,10 @@
   display: none;
 }
 
+.subscribe__bar-text {
+  transition: $transition;
+}
+
 .active-block {
   display: flex;
   justify-content: center;
@@ -123,4 +127,29 @@
 .subscribe__item {
   color: $gray-text;
   margin-bottom: 25px;
+}
+
+.subscribe__link {
+  color: $blue;
+  display: inline-block;
+  position: relative;
+  transition: $transition;
+  &::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: $blue;
+    bottom: -3px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: $transition;
+  }
+  &:hover::after {
+    width: 100%;
+  }
+}
+
+.btn {
+  color: $white;
 }

@@ -94,4 +94,10 @@
 
 .integration__btn {
   background: $blue-text;
+  border: 2px solid $blue-text;
+  transition: $transition;
+  &:hover {
+    background: transparent;
+    color: $blue-text;
+  }
 }

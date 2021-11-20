@@ -33,6 +33,9 @@
     opacity: 0;
     transition: $transition;
   }
+  &:hover {
+    background: rgba($color: $blue-text, $alpha: 0.1);
+  }
   @include breakpoint('phone') {
     max-height: 80px;
   }
@@ -68,4 +71,5 @@
 
 .questions__icon {
   font-size: 20px;
+  color: $blue-text;
 }

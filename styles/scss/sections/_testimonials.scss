@@ -69,6 +69,9 @@
 
 .testimonials__person-img {
   margin-right: 20px;
+  @include breakpoint('touch') {
+    width: 70px;
+  }
 }
 
 .testimonials__person-block {
@@ -84,12 +87,18 @@
   color: $blue-text;
   font-weight: 600;
   font-size: 18px;
+  @include breakpoint('touch') {
+    font-size: 16px;
+  }
 }
 
 .testimonials__name-subtitle {
   display: block;
   color: $gray-text;
   font-size: 18px;
+  @include breakpoint('touch') {
+    font-size: 16px;
+  }
 }
 
 .testimonials__btns {
@@ -107,6 +116,13 @@
   border-radius: 50%;
   margin-left: 20px;
   cursor: pointer;
+  transition: $transition;
+  &:hover {
+    background: $blue-text;
+    .testimonials__icon-btn {
+      color: $white;
+    }
+  }
 }
 
 .testimonials__icon-btn {

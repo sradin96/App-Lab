@@ -32,8 +32,12 @@
 }
 
 .download__link-img {
+  transition: $transition;
   @include breakpoint('phone') {
     width: 80%;
+  }
+  &:hover {
+    transform: scale(1.1);
   }
 }
 
