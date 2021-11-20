@@ -1,0 +1,51 @@
+.download__container {
+  display: flex;
+  align-items: center;
+}
+
+.download__content {
+  width: 50%;
+  @include breakpoint('phone') {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+
+.download__title {
+  color: $blue-text;
+  font-size: 48px;
+  margin-bottom: 30px;
+}
+
+.download__text {
+  color: $gray-text;
+  margin-bottom: 30px;
+}
+
+.download__btns {
+  display: flex;
+  align-items: center;
+  @include breakpoint('phone') {
+    justify-content: center;
+  }
+}
+
+.download__link-img {
+  @include breakpoint('phone') {
+    width: 80%;
+  }
+}
+
+.download__img-block {
+  width: 50%;
+  @include breakpoint('phone') {
+    display: none;
+  }
+}
+
+.download__img {
+  @include breakpoint('tablet') {
+    width: 480px;
+  }
+}

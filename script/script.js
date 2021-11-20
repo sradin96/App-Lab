@@ -1,3 +1,26 @@
+window.onload = () => {
+	$(document).ready(function() {
+		$('.testimonials__slider').slick({
+			draggable: true,
+			arrows: true,
+			dots: false,
+			infinite: true,
+			touchThreshold: 100,
+			autoplay: true,
+			autoplaySpeed: 5000,
+			pauseOnFocus: true,
+			slidesToShow: 1,
+			slidesToScroll: 1,
+            nextArrow: '.btn-right',
+            prevArrow: '.btn-left'
+		});
+	});
+}
+
+$('.questions__card').click(function () {
+	$('.questions__card').removeClass('questions__card-active').eq($(this).index('.questions__card')).addClass('questions__card-active');
+});
+
 $('.header__menu').on('click', function() {
     $('.header__list').toggleClass('open-menu');
     $('.header__menu-bar').toggleClass('active-bar');

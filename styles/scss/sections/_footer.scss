@@ -1,0 +1,67 @@
+.footer {
+  background: $blue-text;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.footer__img-link {
+  display: block;
+  margin-bottom: 30px;
+}
+
+.footer__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.footer--list-column {
+  @include breakpoint('phone') {
+    flex-direction: column;
+    .footer__item {
+      margin: 10px 0;
+    }
+  }
+}
+
+.footer__item {
+  margin: 0 15px;
+}
+
+.footer__link {
+  color: $white;
+  display: inline-block;
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    background: $white;
+    bottom: -3px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    transition: $transition;
+  }
+  &:hover::after {
+    width: 100%;
+  }
+}
+
+.footer__icon {
+  color: $white;
+  opacity: 0.2;
+  font-size: 26px;
+  transition: $transition;
+  cursor: pointer;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.footer__text {
+  opacity: 0.2;
+  color: $white;
+  font-size: 14px;
+}

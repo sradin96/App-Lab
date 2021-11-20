@@ -2,7 +2,6 @@
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center bottom;
-  position: relative;
   margin-bottom: 100px;
   @include breakpoint('touch') {
     margin-bottom: 30px;
@@ -79,6 +78,21 @@
   border: none;
   font-size: 16px;
   cursor: pointer;
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    background: $blue;
+    bottom: -3px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    transition: $transition;
+  }
+  &:hover::after {
+    width: 100%;
+  }
 }
 
 .banner__img-block {
@@ -119,6 +133,10 @@
 .banner__video {
   width: 50%;
   height: 50%;
+  @include breakpoint('phone') {
+    width: 80%;
+    height: 35%;
+  }
 }
 
 .banner__iframe {
